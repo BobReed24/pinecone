@@ -1,2 +1,1 @@
-cd ..
-chmod +x command_pinecone
+chmod +x ../command_pinecone
