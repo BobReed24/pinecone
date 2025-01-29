@@ -156,12 +156,12 @@ def main():
 
             elif command == "bash":
                 if len(command_parts) > 1:
-                    os.system(f"bash {" ".join(command_parts[1:])}")
+                    os.system(f"sh {" ".join(command_parts[1:])}")
                 else:
                     print("Err: No script specified")
 
             elif command.startswith("./"):
-                os.system(f"bash {" ".join(command_parts)}")
+                os.system(f"sh {" ".join(command_parts)}")
             elif command == "output":
                 if len(command_parts) > 1:
                     os.system(f"echo {" ".join(command_parts[1:])}")
@@ -206,7 +206,7 @@ def main():
                 
                 if arg in ["upgrade"]:
                     os.system("clear")
-                    os.system("bash /workspace/all-projects/sys/bin/upgrade.sh")
+                    os.system("sh /workspace/all-projects/sys/bin/upgrade.sh")
                 else:
                     print("Err: Incorrect arguments")
             
