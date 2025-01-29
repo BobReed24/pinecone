@@ -12,4 +12,5 @@ wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/r
 mv restart-sys-soft.sh restarters/restart-sys-soft.sh
 cd restarters
 cd $main
-bash $HOME/sys/command_pinecone
+sh +x $HOME/sys/bin/build.sh
+python $HOME/sys/command_pinecone
