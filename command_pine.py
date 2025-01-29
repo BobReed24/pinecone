@@ -199,7 +199,38 @@ def main():
                 elif arg in ["stat"]:
                     os.system("top")
                 else:
-                    print("Err: Incorrect argument")
+                    print("Err: Incorrect arguments")
+
+            elif command.startswith("sys."):
+                arg = command[4:].strip()
+                
+                if arg in ["upgrade"]:
+                    os.system("clear")
+                    os.system("bash /workspace/all-projects/sys/bin/upgrade.sh")
+                    while True:
+                        os.system("clear")
+                        print("Upgrading...")
+                        time.sleep(1)
+                        os.system("clear")
+                        print("Upgrading..")
+                        time.sleep(1)
+                        os.system("clear")
+                        print("Upgrading.")
+                        time.sleep(1)
+                        os.system("clear")
+                        print("Upgrading")
+                        time.sleep(1)
+                        os.system("clear")
+                        print("Upgrading.")
+                        time.sleep(1)
+                        os.system("clear")
+                        print("Upgrading..")
+                        time.sleep(1)
+                else:
+                    print("Err: Incorrect arguments")
+            
+            else:
+                print(f"Err: Command '{command}' does not exist")
             
             def is_installed(package):
                 check_cmd = f"dpkg -l | grep -w {package}"
