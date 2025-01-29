@@ -5,7 +5,7 @@ mkdir $HOME/sys
 mkdir $HOME/sys/bin
 mkdir $HOME/sys/bin/restarters
 cd $HOME/sys/
-wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pine.py
+wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone.py
 cd bin
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/upgrade.sh
 chmod +x upgrade.sh
