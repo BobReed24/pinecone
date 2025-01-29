@@ -5,6 +5,6 @@
       - ```V22.10+ recommended```
   - Installation
     ```bash
-    wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/install.sh && ./install.sh
+    wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/install.sh && sh install.sh
     ```
     
