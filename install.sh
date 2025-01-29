@@ -12,4 +12,4 @@ wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/r
 mv restart-sys-soft.sh restarters/restart-sys-soft.sh
 cd restarters
 cd $main
-python $HOME/sys/command_pine.py
+python $HOME/sys/command_pinecone
