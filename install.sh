@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir $HOME/sys
 mkdir $HOME/sys/bin
 mkdir $HOME/sys/bin/restarters
