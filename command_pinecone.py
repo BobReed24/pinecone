@@ -207,25 +207,6 @@ def main():
                 if arg in ["upgrade"]:
                     os.system("clear")
                     os.system("bash /workspace/all-projects/sys/bin/upgrade.sh")
-                    while True:
-                        os.system("clear")
-                        print("Upgrading...")
-                        time.sleep(1)
-                        os.system("clear")
-                        print("Upgrading..")
-                        time.sleep(1)
-                        os.system("clear")
-                        print("Upgrading.")
-                        time.sleep(1)
-                        os.system("clear")
-                        print("Upgrading")
-                        time.sleep(1)
-                        os.system("clear")
-                        print("Upgrading.")
-                        time.sleep(1)
-                        os.system("clear")
-                        print("Upgrading..")
-                        time.sleep(1)
                 else:
                     print("Err: Incorrect arguments")
             
