@@ -2,7 +2,6 @@ import os
 import json
 import subprocess
 import time
-import readline
 from termcolor import colored
 
 def start():
