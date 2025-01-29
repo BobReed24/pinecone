@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt-get -y install tmux
+sudo apt-get -y install python
 mkdir $HOME/sys
 mkdir $HOME/sys/bin
 mkdir $HOME/sys/bin/restarters
