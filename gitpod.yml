@@ -1,2 +1,4 @@
 tasks:
   - before: bash build
+  - init: chmod +x setup.sh
+  - command: sudo ./setup.sh
