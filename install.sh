@@ -11,8 +11,8 @@ wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/u
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/build.sh
 mv restart-sys-soft.sh restarters/restart-sys-soft.sh
+wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/pinecone
 cd restarters
 cd $main
-bash /home/gitpod/sys/command_pinecone
 clear
 echo "Done!"
