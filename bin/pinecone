@@ -1,1 +1,1 @@
-bash $HOME/sys/command_pinecone
+/bin/bash -c $HOME/sys/command_pinecone
