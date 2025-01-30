@@ -9,8 +9,10 @@ wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/comma
 cd bin
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/upgrade.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/restarters/restart-sys-soft.sh
+wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/build.sh
 mv restart-sys-soft.sh restarters/restart-sys-soft.sh
 cd restarters
 cd $main
-sh $HOME/sys/bin/build.sh
-python $HOME/sys/command_pinecone
+bash /home/gitpod/sys/command_pinecone
+clear
+echo "Done!"
