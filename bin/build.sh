@@ -1,1 +1,1 @@
-chmod +x ../command_pinecone
+chmod +x $HOME/sys/command_pinecone
