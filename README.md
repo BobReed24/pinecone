@@ -16,11 +16,11 @@ To install and set up this project, follow these steps:
 
 
 # Download install.sh
-```cpp
+```rust
 wget https://raw.githubusercontent.com/BobReed24/pinecone/refs/heads/main/install.sh
 ```
 # Run install script:
-```cpp
+```rust
 sh install.sh
 ```
 
