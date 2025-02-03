@@ -14,12 +14,14 @@ Still needs work. Kind of works right now. Still *mostly* works as intended.
 
 To install and set up this project, follow these steps:
 
-```sh
-# Download install.sh
-wget https://raw.githubusercontent.com/BobReed24/pinecone/refs/heads/main/install.sh
 
+# Download install.sh
+```cpp
+wget https://raw.githubusercontent.com/BobReed24/pinecone/refs/heads/main/install.sh
+```
 # Run install script:
-# sh install.sh
+```cpp
+sh install.sh
 ```
 
 ## Contributing
