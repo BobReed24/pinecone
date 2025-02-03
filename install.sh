@@ -1,10 +1,10 @@
 #!/bin/bash
 sudo apt-get -y install tmux
 sudo apt-get -y install python3
-mkdir $HOME/sys
-mkdir $HOME/sys/bin
-mkdir $HOME/sys/bin/restarters
-cd $HOME/sys/
+mkdir $HOME/pinecone
+mkdir $HOME/pineocne/bin
+mkdir $HOME/pinecone/bin/restarters
+cd $HOME/pinecone/
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone
 chmod +x command_pinecone
 cd bin
