@@ -1,10 +1,42 @@
-### How to install
-  - Requirements
-    - ```Ubuntu```
-      - ```V9.10 minimum```
-      - ```V22.10+ recommended```
-  - Installation
-    ```bash
-    wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/install.sh && sh install.sh
-    ```
-    
+# Pinecone
+
+Still needs work. Kind of works right now. Still *mostly* works as intended.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Installation
+
+To install and set up this project, follow these steps:
+
+```sh
+# Download install.sh
+wget https://raw.githubusercontent.com/BobReed24/pinecone/refs/heads/main/install.sh
+
+# Run install script:
+# sh install.sh
+```
+
+## Contributing
+We welcome contributions! Follow these steps to contribute:
+
+- Fork the repository
+- Create your feature branch (git checkout -b feature/your-feature)
+- Commit your changes (git commit -m 'Add some feature')
+- Push to the branch (git push origin feature/your-feature)
+- Open a Pull Request
+## License
+This project is licensed under the GNU Lesser General Public License v2.1. See the LICENSE file for details.
+
+## Usage
+
+To use Pinecone run:
+
+```sh
+pinecone
+```
