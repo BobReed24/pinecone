@@ -1,3 +1,3 @@
-chmod +x $HOME/sys/command_pinecone
-chmod +x $HOME/sys/bin/pinecone
-sudo mv $HOME/sys/bin/pinecone /bin/pinecone
+chmod +x $HOME/pinecone/command_pinecone
+chmod +x $HOME/pinecone/bin/pinecone
+sudo mv $HOME/pinecone/bin/pinecone /bin/pinecone
