@@ -16,11 +16,11 @@ To install and set up this project, follow these steps:
 
 
 # Download install.sh
-```shell
+```bash
 wget https://raw.githubusercontent.com/BobReed24/pinecone/refs/heads/main/install.sh
 ```
 # Run install script:
-```shell
+```bash
 sh install.sh
 ```
 
