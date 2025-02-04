@@ -1,19 +1,19 @@
 #!/bin/bash
 sudo apt-get -y install tmux
 sudo apt-get -y install python3
-mkdir $HOME/pinecone
-mkdir $HOME/pineocne/bin
-mkdir $HOME/pinecone/bin/restarters
-cd $HOME/pinecone/
+sudo mkdir $HOME/pinecone
+sudo mkdir $HOME/pineocne/bin
+sudo mkdir $HOME/pinecone/bin/restarters
+sudo cd $HOME/pinecone/
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone
 chmod +x command_pinecone
 cd bin
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/upgrade.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/build.sh
-mv restart-sys-soft.sh restarters/restart-sys-soft.sh
+sudo mv restart-sys-soft.sh restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/pinecone
-chmod +x pinecone
+sudo chmod +x pinecone
 sudo mv pinecone /bin/pinecone
 cd restarters
 cd $main
