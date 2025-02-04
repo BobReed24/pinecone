@@ -17,6 +17,7 @@ sudo mv build.sh /pinecone/bin/build.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/pinecone
 sudo chmod +x /pinecone/pinecone
 sudo mv pinecone /bin/pinecone
+sudo chmod +x /bin/pinecone
 cd $main
 clear
 echo "Finished installing Pinecone!"
