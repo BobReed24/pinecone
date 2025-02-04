@@ -3,7 +3,7 @@ echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 sudo apt-get -y install tmux
 sudo apt-get -y install python3
 sudo mkdir /pinecone
-sudo mkdir /pineocne/bin
+sudo mkdir /pinecone/bin
 sudo mkdir /pinecone/bin/restarters
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone
 sudo mv command_pinecone /pinecone/command_pinecone
