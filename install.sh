@@ -5,20 +5,16 @@ sudo apt-get -y install python3
 sudo mkdir /pinecone
 sudo mkdir /pineocne/bin
 sudo mkdir /pinecone/bin/restarters
-sudo cd /pinecone/
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone
-chmod +x command_pinecone
-cd bin
+sudo chmod +x /pinecone/command_pinecone
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/upgrade.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/build.sh
-sudo mv restart-sys-soft.sh restarters/restart-sys-soft.sh
+sudo mv /pinecone/bin/restart-sys-soft.sh /pinecone/bin/restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/pinecone
-sudo chmod +x pinecone
+sudo chmod +x /pinecone/pinecone
 sudo mv pinecone /bin/pinecone
-cd restarters
 cd $main
-# sudo sh /sys/bin/build.sh
 clear
 echo "Finished installing Pinecone!"
 echo "
