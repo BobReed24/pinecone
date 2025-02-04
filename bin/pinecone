@@ -1,1 +1,1 @@
-exec $HOME/pinecone/command_pinecone
+exec /pinecone/command_pinecone
