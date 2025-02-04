@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 sudo apt-get -y install tmux
 sudo apt-get -y install python3
 sudo mkdir /pinecone
