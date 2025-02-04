@@ -1,3 +1,4 @@
+from termcolor import colored
 print(colored("Available commands:", 'cyan'))
 print(colored("  help, h                : Show this help message", 'green'))
 print(colored("  cd <directory>         : Change the current directory", 'green'))
