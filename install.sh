@@ -13,7 +13,7 @@ sudo mv upgrade.sh /pinecone/bin/upgrade.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/restarters/restart-sys-soft.sh
 sudo mv restart-sys-soft.sh /pinecone/bin/restarters/restart-sys-soft.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/build.sh
-sudo mv build.sh /pinecone/bin
+sudo mv build.sh /pinecone/bin/build.sh
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/pinecone
 sudo chmod +x /pinecone/pinecone
 sudo mv pinecone /bin/pinecone
