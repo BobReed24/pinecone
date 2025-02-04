@@ -27,11 +27,22 @@ sh install.sh
 ## Contributing
 We welcome contributions! Follow these steps to contribute:
 
-- Fork the repository
-- Create your feature branch (git checkout -b feature/your-feature)
-- Commit your changes (git commit -m 'Add some feature')
-- Push to the branch (git push origin feature/your-feature)
+- You can only add packages for contributing
+- Create your packge branch
+- Commit your changes to lib/packages.py
+- Push to the branch 
 - Open a Pull Request
+
+## How to make new packages
+- You will need to enter packages.py in your own branch
+- Create a new package in this format
+```
+  [
+  "commandname/libname", "raw file download link",
+]
+```
+- Open a pull request for a merge
+  
 ## License
 This project is licensed under the GNU Lesser General Public License v2.1. See the LICENSE file for details.
 
