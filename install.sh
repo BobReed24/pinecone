@@ -2,6 +2,7 @@
 echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 sudo apt-get -y install tmux
 sudo apt-get -y install python3
+pip install termcolor
 sudo mkdir /pinecone
 sudo mkdir /pinecone/bin
 sudo mkdir /pinecone/bin/restarters
