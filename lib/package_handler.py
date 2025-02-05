@@ -23,7 +23,7 @@ class PackageHandler:
             package_dep = self.get_package_dep(package_name)
             if package_dep:
                 print(f"Installing dependencies: {package_dep}")
-                subprocess.run(f"pip install {package_dep}", shell=True, capture_output=True, text=True)
+                subprocess.run(f"sudo apt-get -y install python3-{package_dep}", shell=True, capture_output=True, text=True)
 
             response = requests.get(package_url)
             if response.status_code == 200:
