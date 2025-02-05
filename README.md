@@ -42,6 +42,7 @@ We welcome contributions! Follow these steps to contribute:
 ]
 ```
 - Open a pull request for a merge
+- We will add your package to the "help" library for you
   
 ## License
 This project is licensed under the GNU Lesser General Public License v2.1. See the LICENSE file for details.
