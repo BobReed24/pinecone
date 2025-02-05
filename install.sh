@@ -1,8 +1,7 @@
 #!/bin/bash
 echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
 sudo apt-get -y install tmux
-sudo apt-get -y install python3
-sudo apt-get -y install python3-pip
+sudo apt-get -y install python3-full
 pip install termcolor
 sudo mkdir /pinecone
 sudo mkdir /pinecone/bin
