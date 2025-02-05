@@ -23,7 +23,7 @@ class PackageHandler:
             package_dep = self.get_package_dep(package_name)
             if package_dep:
                 print(f"Installing dependencies: {package_dep}")
-                subprocess.run(f"sudo apt-get -y install python3-{package_dep}", shell=True, capture_output=True, text=True)
+                subprocess.run(f"pip install {package_dep}", shell=True, capture_output=True, text=True)
 
             response = requests.get(package_url)
             if response.status_code == 200:
@@ -44,7 +44,7 @@ class PackageHandler:
         os.remove(f"/pinecone/lib/{package_name}.py")
         print(colored(f"Library '{package_name}' uninstalled successfully!", "green"))
 
-    def list_installed(self, package_dep):
+    def list_installed(self):
         installed_packages = [f[:-3] for f in os.listdir("lib") if f.endswith(".py")]
         if installed_packages:
             print("Installed packages:")
@@ -67,6 +67,6 @@ class PackageHandler:
 
     def run_package(self, package_name):
         if self.is_installed(package_name):
-            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py])  
+            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py"])
         else:
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
