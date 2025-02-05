@@ -10,6 +10,7 @@ class PackageHandler:
     def is_installed(self, package_name):
         return os.path.isfile(f"/pinecone/lib/{package_name}.py")
 
+    
     def install(self, package_name):
         if self.is_installed(package_name):
             print(colored(f"Error: Library '{package_name}' is already installed", "red"))
@@ -18,6 +19,12 @@ class PackageHandler:
         package_url = self.get_package_url(package_name)
         if package_url:
             print(f"Installing '{package_name}' from {package_url}...")
+
+            package_dep = self.get_package_dep(package_name)
+            if package_dep:
+                print(f"Installing dependencies: {package_dep}")
+                subprocess.run(f"pip install {package_dep}", shell=True, capture_output=True, text=True)
+
             response = requests.get(package_url)
             if response.status_code == 200:
                 with open(f"/pinecone/lib/{package_name}.py", "wb") as f:
@@ -28,15 +35,16 @@ class PackageHandler:
         else:
             print(colored(f"Error: Package '{package_name}' not found", "red"))
 
+
     def uninstall(self, package_name):
         if not self.is_installed(package_name):
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
             return
 
-        os.remove(f"lib/{package_name}.py")
+        os.remove(f"/pinecone/lib/{package_name}.py")
         print(colored(f"Library '{package_name}' uninstalled successfully!", "green"))
 
-    def list_installed(self):
+    def list_installed(self, package_dep):
         installed_packages = [f[:-3] for f in os.listdir("lib") if f.endswith(".py")]
         if installed_packages:
             print("Installed packages:")
@@ -46,13 +54,19 @@ class PackageHandler:
             print("No packages installed.")
 
     def get_package_url(self, package_name):
-        for i in range(0, len(self.packages), 2):
+        for i in range(0, len(self.packages), 3):  
             if self.packages[i] == package_name:
                 return self.packages[i + 1]
         return None
 
+    def get_package_dep(self, package_name):
+        for i in range(0, len(self.packages), 3):  
+            if self.packages[i] == package_name:
+                return self.packages[i + 2] if (i + 2) < len(self.packages) else None
+        return None
+
     def run_package(self, package_name):
         if self.is_installed(package_name):
-            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py"])  
+            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py])  
         else:
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
