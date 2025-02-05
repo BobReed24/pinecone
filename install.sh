@@ -27,6 +27,9 @@ wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/package_handl
 sudo mv package_handler.py /pinecone/lib/package_handler.py
 wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/packages.py
 sudo mv packages.py /pinecone/lib/packages.py
+sudo chmod 777 /pinecone
+sudo chmod 777 /pinecone/lib
+sudo chmod 777 /pinecone/bin
 cd $main
 clear
 echo "Finished installing Pinecone!"
@@ -86,11 +89,10 @@ echo "
                                                                                                     
                                                                                                     
                                                                                                     "
-echo "
-                              ____  _                                 
-                              |  _ \(_)_ __   ___  ___ ___  _ __   ___ 
-                              | |_) | | '_ \ / _ \/ __/ _ \| '_ \ / _ \
-                              |  __/| | | | |  __/ (_| (_) | | | |  __/
-                              |_|   |_|_| |_|\___|\___\___/|_| |_|\___|"
+echo " ____  _                                 
+                            |  _ \(_)_ __   ___  ___ ___  _ __   ___ 
+                            | |_) | | '_ \ / _ \/ __/ _ \| '_ \ / _ \
+                            |  __/| | | | |  __/ (_| (_) | | | |  __/
+                            |_|   |_|_| |_|\___|\___\___/|_| |_|\___|"
 echo "Made by @BobReed24 on github"
 echo "Repo at https://github.com/BobReed24/pinecone"
