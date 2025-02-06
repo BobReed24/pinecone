@@ -65,8 +65,10 @@ class PackageHandler:
                 return self.packages[i + 2] if (i + 2) < len(self.packages) else None
         return None
 
-    def run_package(self, package_name):
-        if self.is_installed(package_name):
-            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py"])
+    def run_package(self, package_name, command_parts):
+        if self.is_installed(package_name) and command_parts is not None:
+            subprocess.run(["python3", f"/pinecone/lib/{package_name}.py"] + command_parts[1:])
+        elif self.is_installed(package_name) and command_parts is None:
+            subprocess.run(["python3"], f"/pinecone/lib/{package_name}.py")
         else:
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
