@@ -23,7 +23,7 @@ sudo mv pinecone /bin/pinecone
 sudo chmod +x /bin/pinecone
 sudo mkdir /pinecone/lib
 wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/__init__.py
-sudo mv __init__.py /pinecone/lib/__init.py__
+sudo mv __init__.py /pinecone/lib/__init__.py
 wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/read.py
 sudo mv read.py /pinecone/lib/read.py
 wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/package_handler.py
