@@ -7,7 +7,7 @@ pip install termcolor
 sudo mkdir /pinecone
 sudo mkdir /pinecone/bin
 sudo mkdir /pinecone/bin/restarters
-wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/command_pinecone
+wget https://www.dropbox.com/scl/fi/0o09zv4tdcltvlxs67d7l/command_pinecone?rlkey=zp3n9y3z87nk1ip2wpbi731ej&st=5k1lickd&dl=1
 sudo mv command_pinecone /pinecone/command_pinecone
 sudo chmod +x /pinecone/command_pinecone
 wget https://raw.githubusercontent.com/BobReed24/hunkon-os/refs/heads/main/bin/upgrade.sh
