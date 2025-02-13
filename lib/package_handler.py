@@ -53,7 +53,7 @@ class PackageHandler:
             print(colored("Error: Cannot remove package_handler and package list", 'red'))
 
     def list_installed(self):
-        installed_packages = [f[:-3] for f in os.listdir("/pinecone/lib") if f.endswith(".py")]
+        installed_packages = [f[:-3] for f in os.listdir("/pinecone/lib/") if f.endswith(".py")]
         if installed_packages:
             print("Installed packages:")
             for pkg in installed_packages:
