@@ -1,9 +1,10 @@
 #!/bin/bash
 echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo EDITOR='tee -a' visudo
+sudo apt --fix-broken install -y
 sudo apt-get -y update
-sudo apt-get -y install tmux
-sudo apt-get -y install python3-full
-pip install termcolor
+sudo apt-get -y install tmux python3-full python3-pip
+sudo python3 -m venv /pinecone/venv/
+sudo /pinecone/venv/bin/pip install termcolor
 sudo mkdir /pinecone
 sudo mkdir /pinecone/bin
 sudo mkdir /pinecone/bin/restarters
@@ -30,6 +31,7 @@ wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/package_handl
 sudo mv package_handler.py /pinecone/lib/package_handler.py
 wget https://github.com/BobReed24/pinecone/raw/refs/heads/main/lib/packages.py
 sudo mv packages.py /pinecone/lib/packages.py
+sudo chmod +x /pinecone/venv/bin/activate
 sudo chmod 777 /pinecone
 sudo chmod 777 /pinecone/lib
 sudo chmod 777 /pinecone/bin
@@ -94,8 +96,8 @@ echo "
                                                                                                     "
 echo "                             ____  _"
 echo "                            |  _ \(_)_ __   ___  ___ ___  _ __   ___ "
-echo "                            | |_) | | '_ \ / _ \/ __/ _ \| '_ \ / _ \"
-echo "                            |  __/| | | | |  __/ (_| (_) | | | |  __/"
-echo "                            |_|   |_|_| |_|\___|\___\___/|_| |_|\___|"      
+echo "                            | |_) | | '_ \ / _ \/ __/ _ \| '_ \ / _ \   "
+echo "                            |  __/| | | | |  __/ (_| (_) | | | |  __/ "
+echo "                            |_|   |_|_| |_|\___|\___\___/|_| |_|\___| "      
 echo "Made by @BobReed24 on github"
 echo "Repo at https://github.com/BobReed24/pinecone"
