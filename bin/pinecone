@@ -1,1 +1,4 @@
-exec /pinecone/command_pinecone
+source /pinecone/venv/bin/activate
+/pinecone/command_pinecone
+
+deactivate
