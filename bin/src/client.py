@@ -28,7 +28,6 @@ from googletrans.models import Detected, Translated
 
 EXCLUDES = ("en", "ca", "fr")
 
-
 class Translator:
     """Google Translate ajax API implementation class
 
@@ -79,14 +78,13 @@ class Translator:
             self.client.timeout = timeout
 
         if service_urls:
-            # default way of working: use the defined values from user app
+
             self.service_urls = service_urls
             self.client_type = "webapp"
             self.token_acquirer = TokenAcquirer(
                 client=self.client, host=self.service_urls[0]
             )
 
-            # if we have a service url pointing to client api we force the use of it as defaut client
             for t in enumerate(service_urls):
                 api_type = re.search("googleapis", service_urls[0])
                 if api_type:
@@ -111,7 +109,7 @@ class Translator:
     async def _translate(
         self, text: str, dest: str, src: str, override: typing.Dict[str, typing.Any]
     ) -> typing.Tuple[typing.List[typing.Any], Response]:
-        token = "xxxx"  # dummy default value here as it is not used by api client
+        token = "xxxx"  
         if self.client_type == "webapp":
             token = await self.token_acquirer.do(text)
 
@@ -130,7 +128,7 @@ class Translator:
         if r.status_code == 200:
             data = utils.format_json(r.text)
             if not isinstance(data, list):
-                data = [data]  # Convert dict to list to match return type
+                data = [data]  
             return data, r
 
         if self.raise_exception:
@@ -147,7 +145,7 @@ class Translator:
         self, text: str, dest: str, src: str, override: typing.Dict[str, typing.Any]
     ) -> httpx.Request:
         """Async helper for making the translation request"""
-        token = "xxxx"  # dummy default value here as it is not used by api client
+        token = "xxxx"  
         if self.client_type == "webapp":
             token = await self.token_acquirer.do(text)
 
@@ -285,34 +283,30 @@ class Translator:
         origin = text
         data, response = await self._translate(text, dest, src, kwargs)
 
-        # this code will be updated when the format is changed.
         translated = "".join([d[0] if d[0] else "" for d in data[0]])
 
         extra_data = self._parse_extra_data(data)
 
-        # actual source language that will be recognized by Google Translator when the
-        # src passed is equal to auto.
         try:
             src = data[2]
-        except Exception:  # pragma: nocover
+        except Exception:  
             pass
 
         pron = origin
         try:
             pron = data[0][1][-2]
-        except Exception:  # pragma: nocover
+        except Exception:  
             pass
 
         if pron is None:
             try:
                 pron = data[0][1][2]
-            except:  # pragma: nocover  # noqa: E722
+            except:  
                 pass
 
         if dest in EXCLUDES and pron == origin:
             pron = translated
 
-        # put final values into a new Translated object
         result = Translated(
             src=src,
             dest=dest,
@@ -382,8 +376,6 @@ class Translator:
 
         data, response = await self._translate(text, "en", "auto", kwargs)
 
-        # actual source language that will be recognized by Google Translator when the
-        # src passed is equal to auto.
         src = ""
         confidence = 0.0
         try:
@@ -393,7 +385,7 @@ class Translator:
             else:
                 src = "".join(data[8][0])
                 confidence = data[8][-2][0]
-        except Exception:  # pragma: nocover
+        except Exception:  
             pass
         result = Detected(lang=src, confidence=confidence, response=response)
 
