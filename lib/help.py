@@ -1,4 +1,4 @@
-ver = "V0.1.5"
+ver = "V0.1.6"
 from termcolor import colored
 print(colored("Available commands:", 'cyan'))
 print(colored("  help, h                : Show this help message", 'green'))
@@ -7,6 +7,7 @@ print(colored("  peek <directory>       : List files in the specified directory"
 print(colored("  branch <directory>     : List files in the specified directory", 'green'))
 print(colored("  tree                   : List files in the current directory", 'green'))
 print(colored("  task --show <process>  : Show running processes matching the name", 'green'))
+print(colored("  task --kill <processID>  : Kill a running process matching the name"))
 print(colored("  admin install <pkg>    : Install a package", 'green'))
 print(colored("  admin update           : Update the package installer", 'green'))
 print(colored("  admin ubuntu <cmd>     : Run a command with sudo", 'green'))

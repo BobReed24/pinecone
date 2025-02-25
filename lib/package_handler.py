@@ -25,7 +25,7 @@ class PackageHandler:
         package_dep = self.get_package_dep(package_name)
         if package_dep:
             print(f"Installing dependencies: {package_dep}")
-            install1 = f"pip install {package_dep}"
+            install1 = f"/pinecone/venv/bin/pip install {package_dep}"
             install2 = f"sudo apt-get -y update && sudo apt-get -y install python3-{package_dep}"
             process1 = subprocess.run(install1, shell=True, text=True, capture_output=True)
             process2 = subprocess.run(install2, shell=True, capture_output=True, text=True)
