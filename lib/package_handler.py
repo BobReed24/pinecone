@@ -146,8 +146,8 @@ class PackageHandler:
 
     def run_package(self, package_name, command_parts):
         if self.is_installed(package_name) and command_parts is not None:
-            subprocess.run(["/pinecone/venv/bin/python3", f"/pinecone/lib/{package_name}.py"] + command_parts[1:])
+            subprocess.run(["sudo /pinecone/venv/bin/python3", f"/pinecone/lib/{package_name}.py"] + command_parts[1:])
         elif self.is_installed(package_name) and command_parts is None:
-            subprocess.run(["/pinecone/venv/bin/python3"], f"/pinecone/lib/{package_name}.py")
+            subprocess.run(["sudo /pinecone/venv/bin/python3"], f"/pinecone/lib/{package_name}.py")
         else:
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
