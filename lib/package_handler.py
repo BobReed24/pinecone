@@ -10,7 +10,6 @@ class PackageHandler:
     def is_installed(self, package_name):
         return os.path.isfile(f"/pinecone/lib/{package_name}.py")
 
-    
     def install(self, package_name):
         if self.is_installed(package_name):
             print(colored(f"Error: Library '{package_name}' is already installed", "red"))
@@ -62,10 +61,10 @@ class PackageHandler:
             print(colored(f"Error: Library '{package_name}' is not installed", "red"))
             return
 
-        version = self.get_package_lver(pkg)
-        version2 = self.get_package_ver(pkg)
+        version = self.get_package_lver(package_name)
+        version2 = self.get_package_ver(package_name)
 
-        print(f"Updating '{package_name}.{version}' to '{package_name}.{version2}'...")
+        print(f"Updating '{package_name} - {version}' to '{package_name} - {version2}'...")
 
         backup_path = f"/pinecone/lib/{package_name}.py.bak"
         package_path = f"/pinecone/lib/{package_name}.py"
