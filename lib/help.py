@@ -1,7 +1,7 @@
-ver = "V0.1.8"
+ver = "V0.1.9"
 from termcolor import colored
 print(colored("Available commands:", 'cyan'))
-print(colored("  help, h                : Show this help message", 'green'))
+print(colored("  help                   : Show this help message", 'green'))
 print(colored("  cd <directory>         : Change the current directory", 'green'))
 print(colored("  peek <directory>       : List files in the specified directory", 'green'))
 print(colored("  branch <directory>     : List files in the specified directory", 'green'))
