@@ -16,10 +16,13 @@ class PackageHandler:
             return
 
         version = self.get_package_ver(package_name)
-
         package_url = self.get_package_url(package_name)
-        if package_url:
-            print(f"Installing '{package_name} - {version}' from {package_url}...")
+        
+        if not package_url:
+            print(colored(f"Error: Package '{package_name}' not found", "red"))
+            return
+
+        print(f"Installing '{package_name} - {version}' from {package_url}...")
 
         package_dep = self.get_package_dep(package_name)
         if package_dep:
@@ -29,16 +32,13 @@ class PackageHandler:
             process1 = subprocess.run(install1, shell=True, text=True, capture_output=True)
             process2 = subprocess.run(install2, shell=True, capture_output=True, text=True)
 
-
-            response = requests.get(package_url)
-            if response.status_code == 200:
-                with open(f"/pinecone/lib/{package_name}.py", "wb") as f:
-                    f.write(response.content)
-                print(colored(f"Library '{package_name}.{version}' installed successfully!", "green"))
-            else:
-                print(colored(f"Error: Failed to download '{package_name}'", "red"))
+        response = requests.get(package_url)
+        if response.status_code == 200:
+            with open(f"/pinecone/lib/{package_name}.py", "wb") as f:
+                f.write(response.content)
+            print(colored(f"Library '{package_name}.{version}' installed successfully!", "green"))
         else:
-            print(colored(f"Error: Package '{package_name}' not found", "red"))
+            print(colored(f"Error: Failed to download '{package_name}'", "red"))
 
 
     def uninstall(self, package_name):
@@ -110,19 +110,19 @@ class PackageHandler:
 
 
     def get_package_url(self, package_name):
-        for i in range(0, len(self.packages), 2):  
+        for i in range(0, len(self.packages), 4):  
             if self.packages[i] == package_name:
                 return self.packages[i + 1]
         return None
 
     def get_package_dep(self, package_name):
-        for i in range(0, len(self.packages), 2):  
+        for i in range(0, len(self.packages), 4):  
             if self.packages[i] == package_name:
                 return self.packages[i + 2] if (i + 2) < len(self.packages) else None
         return None
 
     def get_package_ver(self, package_name):
-        for i in range(0, len(self.packages), 2):  
+        for i in range(0, len(self.packages), 4):  
             if self.packages[i] == package_name:
                 return self.packages[i + 3] if i + 3 < len(self.packages) else None
         return None
